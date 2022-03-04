@@ -16,22 +16,28 @@ console.log(kmUser);
 // prezzo al km 0.21€
 let priceForKm = kmUser * 0.21;
 
-const underage = (priceForKm * 20 / 100);
+const underage = (priceForKm * 20 / 100); // sconto 20%
 
-const overage = (priceForKm * 40 / 100);
+const overage = (priceForKm * 40 / 100); // sconto 40%
 
 console.log(priceForKm);
+
+// prezzo finale
+
+
+
 
 
 // sconto 20% per <18 anni, sconto 40% >= 65 anni
 if (yourAge < 18) {
-    let finalPrice = priceForKm - underage;
-    console.log(finalPrice);
+    finalPrice = priceForKm - underage
 } else if (yourAge >= 65) {
-    let finalPrice = priceForKm - overage;
-    console.log(finalPrice);
+    finalPrice = priceForKm - overage
+} else {
+    finalPrice = priceForKm
 }
 
+let finalPrice = finalPrice.toFixed(2);
 
 
 document.getElementById('userName').innerText = 'Il tuo nome è: ' + yourName;
