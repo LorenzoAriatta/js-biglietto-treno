@@ -23,6 +23,8 @@ const overage = (priceForKm * 40 / 100); // sconto 40%
 console.log(priceForKm);
 
 // prezzo finale
+
+
 let finalPrice = 0;
 
 
@@ -42,4 +44,4 @@ document.getElementById('userName').innerText = 'Il tuo nome è: ' + yourName;
 document.getElementById('userLastName').innerText = 'Il tuo cognome è: ' + lastName;
 document.getElementById('userAge').innerText = 'La tua età è: ' + yourAge;
 document.getElementById('userKm').innerText = 'Vuoi percorrere: ' + kmUser + 'Km';
-document.getElementById('totalPrice').innerText = 'Prezzo Biglietto: ' + ticketPrice;
+document.getElementById('totalPrice').innerText = 'Prezzo Biglietto: ' + ticketPrice + '€';
