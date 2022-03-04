@@ -23,25 +23,23 @@ const overage = (priceForKm * 40 / 100); // sconto 40%
 console.log(priceForKm);
 
 // prezzo finale
-
-
-
+let finalPrice = 0;
 
 
 // sconto 20% per <18 anni, sconto 40% >= 65 anni
 if (yourAge < 18) {
-    finalPrice = priceForKm - underage
+    finalPrice = priceForKm - underage;
 } else if (yourAge >= 65) {
-    finalPrice = priceForKm - overage
+    finalPrice = priceForKm - overage;
 } else {
-    finalPrice = priceForKm
+    finalPrice = priceForKm;
 }
 
-let finalPrice = finalPrice.toFixed(2);
+const ticketPrice = finalPrice.toFixed(2);
 
 
 document.getElementById('userName').innerText = 'Il tuo nome è: ' + yourName;
 document.getElementById('userLastName').innerText = 'Il tuo cognome è: ' + lastName;
 document.getElementById('userAge').innerText = 'La tua età è: ' + yourAge;
 document.getElementById('userKm').innerText = 'Vuoi percorrere: ' + kmUser + 'Km';
-document.getElementById('totalPrice').innerText = 'Prezzo Biglietto: ' + finalPrice;
+document.getElementById('totalPrice').innerText = 'Prezzo Biglietto: ' + ticketPrice;
